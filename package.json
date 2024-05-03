@@ -1,8 +1,8 @@
 {
   "name": "app-de-medicamentos",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/server.ts",
+  "description": "App de medicamentos",
+  "main": "Backend/src/server.ts",
   "engines": {
     "node": ">=16.14.0"
   },  
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/TatiStoiev/App-de-Medicamentos.git"
   },
-  "author": "",
+  "authors": "Camilo Carvallho, Dalmo Neto, Gabriel Amorim, Keli Menezes, Johnathan Spinola e Tatiana Stoiev",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/TatiStoiev/App-de-Medicamentos/issues"

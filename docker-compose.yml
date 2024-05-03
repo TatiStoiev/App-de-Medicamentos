@@ -1,15 +1,13 @@
 services:
-  backend: 
+  backend:
     build: .
     container_name: app_medicamentos
-    command: npm run dev
     volumes:
       - ./src:/app/src
     depends_on:
-      - database:
-        condition: service_healthy
+      - database
     ports:
-      -3001:3001
+      - 3001:3001
     environment:
       DATABASE_HOST: database
       DATABASE_PORT: 3006
@@ -21,12 +19,7 @@ services:
   database: 
     container_name: app_mdicamentos_db
     image: mysql:8.0.32
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 3
     ports:
-      -3306:3306
+      - 3306:3306
     
   

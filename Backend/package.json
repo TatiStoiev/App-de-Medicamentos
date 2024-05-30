@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "npx -y tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Camilo Carvallho, Dalmo Neto, Gabriel Amorim, Keli Menezes, Johnathan Spinola e Tatiana Stoiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TatiStoiev/App-de-Medicamentos/issues"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "16.11",
+    "@types/sequelize": "^4.28.20",
+    "nodemon": "^3.1.2",
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0",
+    "sequelize": "^6.37.3"
+  }
+}

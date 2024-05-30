@@ -1,0 +1,32 @@
+services:
+  backend: 
+    container_name: app_medicamentos_backend
+    build: ./Backend
+    ports:
+      - 3001:3001
+    volumes:
+      - ./Backend/src:/Backend/src
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 3006
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: password 
+      DATABASE_DATABASE: app_medicamentos
+      JWT_SECRET: secret
+  db:
+    container_name: app_medicamentos_db
+    image: mysql:8.0.32
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+      

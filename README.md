@@ -18,13 +18,13 @@ Ficamos empolgados com a colaboração e decidimos aproveitar a oportunidade par
 
 ### Objetivos Iniciais da Aplicação
 
+- Conectar médico e pacientes através da troca segura de mensagens;
 - Lembrar o usuário nos horários de tomar seus medicamentos, através de alerta escrito e sonoro;
-- Conter o histórico médico do paciente como: medicamentos, exames e informações sobre doenças pré existentes; 
 
 ### Objetivos Futuros da Aplicação
 
+- Conter o histórico médico do paciente como: medicamentos, exames e informações sobre doenças pré existentes; 
 - Configurá-la para vários tamanhos de tela;
-- Conectar médico e pacientes através da troca segura de mensagens;
 - Possibilitar que os médicos possam inserir informações importantes sobre o paciente 
 
 ### Implementação

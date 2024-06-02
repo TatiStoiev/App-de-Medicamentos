@@ -1,10 +1,4 @@
-import express from 'express';
-import app from './app';
+import App from './app';
 
-const PORT = 3001;
-
-const server = app.listen(PORT, () => console.log(
-  `Server is running on PORT: ${PORT}`,
-));
-
-export default server;
+const app = new App();
+app.start(3001);

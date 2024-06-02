@@ -1,7 +1,25 @@
-import express from 'express';
+import express, { Express } from 'express'
+import router from './routes';
 
-const app = express();
+export default class App {
+    server: Express
 
-app.use(express.json());
+    constructor() {
+    
+        this.server = express();
 
-export default app;
+        this.server.use(express.json())
+
+        this.routes();
+    }
+
+    private routes(): void {
+        this.server.use(router);
+      }
+    
+      public start(port: number = 3001): void {
+        this.server.listen(port, () => {
+          console.log(`Listening on port ${port}`);
+        });
+      }
+}

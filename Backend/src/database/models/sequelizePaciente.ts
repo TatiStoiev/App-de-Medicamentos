@@ -36,7 +36,9 @@ import {
     }, {
         sequelize: db, 
         modelName: 'pacientes',
-        tableName: 'pacientes',   
+        tableName: 'pacientes', 
+        timestamps: false, 
+
   })
 
   export default sequelizePaciente;

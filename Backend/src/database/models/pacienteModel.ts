@@ -15,7 +15,7 @@ export default class PacienteModel implements IPacienteModel {
     }
 
     async findByEmail(email: string): Promise<IPacienteSemSenha | null> {
-        const result = await this.model.findOne({ where: { email } })
+        const result = await this.model.findOne({ where: { email: email } })
         if (result === null) return null;
 
         const { id, nome } = result;
